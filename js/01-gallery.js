@@ -17,6 +17,7 @@ function createGalleryItemsMarkup(items) {
     </li>`;
   }).join('');
 }
+let instance = null;
 
 function onImgClick(event) {
   event.preventDefault();
@@ -31,7 +32,7 @@ function onImgClick(event) {
 
   console.log(currentImgUrl);
 
-  const instance = basicLightbox.create(`<img src="${currentImgUrl}" width="1280" height="auto"/>`, {
+  instance = basicLightbox.create(`<img src="${currentImgUrl}" width="1280" height="auto"/>`, {
     onShow: () => {
       document.addEventListener('keydown', onEscKeyPress);
     },
