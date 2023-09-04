@@ -49,7 +49,7 @@ function onEscKeyPress(event) {
 
   if (!isEscKey) return;
 
-  const instance = basicLightbox.get();
+  
 
   instance.close();
 }
